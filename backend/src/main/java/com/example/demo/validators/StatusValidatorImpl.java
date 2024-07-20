@@ -13,8 +13,6 @@ public class StatusValidatorImpl implements ConstraintValidator<StatusValidator,
 
     @Override
     public boolean isValid(String status, ConstraintValidatorContext context) {
-        System.out.println(status);
-
         if (status == null) {
             return false;
         }

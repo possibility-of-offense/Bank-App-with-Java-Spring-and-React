@@ -24,7 +24,8 @@ public class AccountRestController {
     // return all accounts
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/show-accounts")
-    public List<Account> showAccounts(@RequestParam(required = false) String size, @RequestParam(required = false) String page) {
+    public List<Account> showAccounts(@RequestParam(required = false) String size,
+                                      @RequestParam(required = false) String page) {
         if(size != null) {
             return accountService.findAccounts(Integer.parseInt(page), Integer.parseInt(size));
         } else {
@@ -91,6 +92,7 @@ public class AccountRestController {
     }
 
     // update account
+    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/update-account")
     public Account updateAccount(@RequestBody Account account) {
         return accountService.save(account);

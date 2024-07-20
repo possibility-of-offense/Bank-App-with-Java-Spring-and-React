@@ -28,13 +28,16 @@ public class TransferServiceImpl implements TransferService {
     public List<Transfer> findAllByAccountId(int accountId) {
         Pageable pageable = PageRequest.of(0, 1);
         Page<Transfer> transfers = transferRepository.findAll(pageable);
-        System.out.println(transfers.getContent());
-
-        for(Transfer foo : transfers.getContent()) {
-            System.out.println(foo);
-        }
 
         return transferRepository.findAllByAccountId(accountId);
+    }
+
+    @Override
+    public Page<Transfer> findTransfers(int accountId, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<Transfer> transfers = transferRepository.findAll(pageable);
+
+        return transferRepository.findAllProjected(accountId, pageable);
     }
 
     @Override

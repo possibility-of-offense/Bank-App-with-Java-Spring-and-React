@@ -4,6 +4,7 @@ import com.example.demo.entity.Transfer;
 import com.example.demo.entity.CreateTransferRequestBody;
 import com.example.demo.service.TransferService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,11 +32,17 @@ public class TransferRestController {
         );
     }
 
-    // Show transfers for certain accounts
+    // Show transfers for certain accounts | paginate the results by 5
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/show-transfers-by-account-id/{accountId}")
-    public List<Transfer> showTransfersByAccountId(@PathVariable int accountId) {
-        return transferService.findAllByAccountId(accountId);
+    public Page<Transfer> showTransfersByAccountId(@PathVariable int accountId,
+                                                   @RequestParam(required = false) String size,
+                                                   @RequestParam(required = false) String page) {
+        if(size != null) {
+            return transferService.findTransfers(accountId, Integer.parseInt(page), Integer.parseInt(size));
+        } else {
+            return transferService.findTransfers(accountId, 0, 5);
+        }
     }
 
     // Show transfers by transfer ID
