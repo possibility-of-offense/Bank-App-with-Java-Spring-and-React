@@ -1,0 +1,15 @@
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pagination button {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 5px;
+}

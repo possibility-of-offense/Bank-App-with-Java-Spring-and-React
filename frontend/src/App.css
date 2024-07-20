@@ -1,0 +1,82 @@
+.App {
+    text-align: center;
+    display: grid;
+    grid-gap: 1rem;
+    height: 100vh;
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .App {
+        grid-template-columns: 20% 70%;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1023px) {
+    .App {
+        grid-template-columns: 30% 70%;
+    }
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 2rem 1rem;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+aside .logo__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+aside button {
+    all: unset;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #1da1f2;
+    /* transition: background-color 0.2s ease-in-out; */
+}
+
+aside button.active-item {
+    background-color: #1da0f2b2 !important;
+    color: #fff;
+}
+
+aside button:hover,
+aside button:focus,
+aside button:active {
+    background-color: #1da0f2b2;
+}
+
+.main-wrapper {
+    width: 70%;
+    margin: 3rem auto;
+}
+
+@media (max-width: 1023px) {
+    .main-wrapper {
+        width: 90%;
+    }
+}
+
+.disabled {
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+
+.overflow-auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

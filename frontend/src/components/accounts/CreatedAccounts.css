@@ -1,0 +1,26 @@
+.created-accounts__grid {
+    width: 100%;
+}
+
+.created-accounts__grid th {
+    border-radius: 5px 5px 0 0;
+}
+
+.created-accounts__grid th,
+.created-accounts__grid td {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.created-accounts__grid tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.created-accounts__grid th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1da1f2;
+    color: white;
+}

@@ -1,0 +1,19 @@
+.alert {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    background-color: #42b883;
+    color: #fff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 1rem;
+    opacity: 0;
+    animation: showAlert 0.2s ease-in-out forwards;
+    z-index: 100000;
+}
+
+@keyframes showAlert {
+    to {
+        opacity: 1;
+    }
+}

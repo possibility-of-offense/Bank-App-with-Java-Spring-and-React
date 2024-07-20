@@ -1,0 +1,10 @@
+.created-account button {
+    all: unset;
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 3px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 3px;
+    cursor: pointer;
+}

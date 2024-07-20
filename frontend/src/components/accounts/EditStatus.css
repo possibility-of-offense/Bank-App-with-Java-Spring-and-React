@@ -1,0 +1,47 @@
+.modal .account-status__inner {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal button.button-status {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #1da1f2;
+}
+
+.modal .account-status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal button.button-change-status {
+    all: unset;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #1da1f2;
+    color: #0778be;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-top: auto;
+    padding: 3px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.modal button.button-change-status:hover {
+    background-color: #ddd;
+}
+
+.change-status__loader-wrapper {
+    display: flex;
+    justify-content: center;
+}

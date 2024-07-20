@@ -1,0 +1,89 @@
+.add-account__form {
+    width: 300px;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.add-account__form h2 {
+    font-size: 17px;
+    margin-bottom: 1.4rem;
+}
+
+.input {
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #1da1f2;
+    margin: 0.7rem 0;
+}
+
+.input label {
+    font-size: 11px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.input label.focused {
+    top: 0;
+    left: 10px;
+    transform: translateY(-60%);
+    font-size: 8px;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.input input:focus + label {
+    top: 0;
+    left: 10px;
+    transform: translateY(-60%);
+    font-size: 8px;
+}
+
+.add-account__form button[type='submit'] {
+    all: unset;
+    background-color: #1da1f2;
+    color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 3px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error-input {
+    border-color: red;
+}
+
+.error-input label {
+    color: red;
+    font-weight: bold;
+}

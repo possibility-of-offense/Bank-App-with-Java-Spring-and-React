@@ -1,0 +1,10 @@
+.additional-transfer-info {
+    flex-grow: 1;
+    width: 100%;
+    border-top: 1px solid #333;
+    display: grid !important;
+}
+
+.additional-transfer-info p {
+    margin-left: 0 !important;
+}
