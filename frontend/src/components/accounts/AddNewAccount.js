@@ -15,10 +15,10 @@ export default function AddNewAccount({ onDisableButtons, onRevalidateCache }) {
 
     // State to hold the formData
     const [formState, setFormState] = useState({
-        name: 'dada',
-        iban: 'dada',
-        status: 'active',
-        availableAmount: '12412',
+        name: '',
+        iban: '',
+        status: '',
+        availableAmount: '',
     });
 
     // Timer to hide the alert
