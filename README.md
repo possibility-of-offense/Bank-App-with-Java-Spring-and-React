@@ -1,5 +1,12 @@
 # Project for a technical interview for a SmartIT
 
+Apply the MySQL configuration inside the application.properties.
+Things to change - the datasource url, the username and password:
+
+1. spring.datasource.url=jdbc:mysql://localhost:3306/bank
+2. spring.datasource.username=root
+3. spring.datasource.password=user
+
 **Created Accounts** ![Created Accounts](./screenshots/created-accounts.png)
 **Account info** ![Account Info](./screenshots/account-info.png)
 **Update account** ![Update account](./screenshots/update-account.png)
